@@ -1,0 +1,160 @@
+.bill-grid {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 24px;
+  margin-top: 8px;
+}
+
+.bill-section {
+  margin-bottom: 24px;
+}
+
+.cat-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.cat-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 16px;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.05);
+  border-radius: 16px;
+  color: #8892b0;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.cat-btn:hover {
+  background: rgba(255,255,255,0.05);
+  color: #fff;
+}
+
+.cat-btn.active {
+  background: rgba(108, 92, 231, 0.1);
+  border-color: #6c5ce7;
+  color: #fff;
+}
+
+.cat-icon {
+  font-size: 1.4rem;
+}
+
+.biller-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.biller-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 20px;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.05);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.biller-item:hover {
+  background: rgba(255,255,255,0.04);
+}
+
+.biller-item.active {
+  background: rgba(255,255,255,0.06);
+  border-color: rgba(255,255,255,0.15);
+}
+
+.biller-icon {
+  font-size: 1.2rem;
+}
+
+.biller-name {
+  flex: 1;
+  font-weight: 500;
+}
+
+.check {
+  color: #00b894;
+  font-weight: 700;
+}
+
+.bill-input-wrapper {
+  display: flex;
+  align-items: center;
+  background: rgba(10,14,39,0.3);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 12px;
+  padding: 12px 20px;
+}
+
+.bill-input-wrapper .currency {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-right: 12px;
+}
+
+.bill-input-wrapper input {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+  width: 100%;
+  outline: none;
+}
+
+.pay-btn {
+  width: 100%;
+  padding: 18px;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.history-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  background: rgba(255,255,255,0.02);
+  border-radius: 12px;
+}
+
+.h-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.h-name {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.h-date {
+  font-size: 0.75rem;
+  color: #5a6380;
+}
+
+.h-amount {
+  font-weight: 700;
+  color: #fff;
+}
+
+@media (max-width: 1024px) {
+  .bill-grid {
+    grid-template-columns: 1fr;
+  }
+}

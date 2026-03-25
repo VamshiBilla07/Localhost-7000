@@ -1,0 +1,73 @@
+.notif-dropdown {
+  position: absolute;
+  top: 60px;
+  right: 0;
+  width: 360px;
+  max-height: 480px;
+  z-index: 1000;
+  background: rgba(10, 10, 10, 0.95);
+  backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  animation: dropdownIn 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+@keyframes dropdownIn {
+  from { opacity: 0; transform: translateY(10px) scale(0.95); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.notif-header {
+  padding: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.notif-header h3 { font-size: 1rem; font-weight: 700; margin: 0; }
+.mark-all { background: transparent; border: none; font-size: 0.8rem; color: #8892b0; cursor: pointer; }
+.mark-all:hover { color: #fff; }
+
+.notif-list { overflow-y: auto; flex: 1; }
+.notif-item {
+  display: flex; gap: 16px; padding: 16px 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  transition: background 0.2s;
+  cursor: pointer;
+  position: relative;
+}
+.notif-item:hover { background: rgba(255, 255, 255, 0.03); }
+.notif-item.unread { background: rgba(255, 255, 255, 0.02); }
+
+.notif-icon {
+  width: 40px; height: 40px; border-radius: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  display: flex; align-items: center; justify-content: center; font-size: 1.2rem;
+}
+
+.notif-content { flex: 1; }
+.notif-title { font-size: 0.9rem; font-weight: 600; margin-bottom: 4px; }
+.notif-message { font-size: 0.82rem; color: #8892b0; line-height: 1.4; margin-bottom: 4px; }
+.notif-time { font-size: 0.75rem; color: #5a6380; }
+
+.unread-dot {
+  width: 8px; height: 8px; border-radius: 50%;
+  background: #ffffff;
+  position: absolute; top: 20px; right: 20px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.notif-footer {
+  padding: 16px; border-top: 1px solid rgba(255, 255, 255, 0.08);
+  text-align: center;
+}
+.view-all {
+  background: transparent; border: none; font-size: 0.85rem; font-weight: 600;
+  color: #fff; cursor: pointer; opacity: 0.8;
+}
+.view-all:hover { opacity: 1; text-decoration: underline; }

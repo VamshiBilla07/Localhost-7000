@@ -1,0 +1,179 @@
+.add-card-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1.5fr;
+  gap: 32px;
+  margin-top: 8px;
+}
+
+.form-section {
+  margin-bottom: 32px;
+}
+
+.type-toggle {
+  display: flex;
+  background: rgba(255,255,255,0.03);
+  padding: 6px;
+  border-radius: 12px;
+  gap: 6px;
+}
+
+.toggle-btn {
+  flex: 1;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  background: transparent;
+  color: #8892b0;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.toggle-btn.active {
+  background: rgba(255,255,255,0.08);
+  color: #fff;
+}
+
+.type-desc {
+  font-size: 0.8rem;
+  color: #5a6380;
+  margin-top: 12px;
+  line-height: 1.4;
+}
+
+.network-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.net-btn {
+  padding: 16px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.05);
+  color: #8892b0;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.net-btn.active {
+  border-color: #6c5ce7;
+  background: rgba(108, 92, 231, 0.1);
+  color: #fff;
+}
+
+.limit-input-box {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(255,255,255,0.03);
+  padding: 14px 20px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.08);
+  margin-bottom: 12px;
+}
+
+.limit-input-box input {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 700;
+  width: 100%;
+  outline: none;
+}
+
+.limit-slider {
+  width: 100%;
+  accent-color: #6c5ce7;
+}
+
+.create-btn {
+  width: 100%;
+  padding: 18px;
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+/* Card Visual */
+.card-visual-preview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+}
+
+.live-card {
+  width: 100%;
+  max-width: 400px;
+  aspect-ratio: 1.6;
+  border-radius: 20px;
+  padding: 32px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+  background: linear-gradient(135deg, #2d3436 0%, #000 100%);
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.live-card.visa { background: linear-gradient(135deg, #1e3799 0%, #0c2461 100%); }
+.live-card.mastercard { background: linear-gradient(135deg, #eb4d4b 0%, #6c2323 100%); }
+
+.live-shimmer {
+  position: absolute;
+  top: 0; left: -100%;
+  width: 50%; height: 100%;
+  background: linear-gradient(to right, transparent, rgba(255,255,255,0.05), transparent);
+  transform: skewX(-20deg);
+  animation: shimmer 3s infinite;
+}
+
+.live-type { font-size: 0.8rem; font-weight: 700; opacity: 0.6; }
+.live-chip { width: 45px; height: 35px; background: linear-gradient(135deg, #d4af37, #f1c40f); border-radius: 8px; margin-top: 20px; border: 1px solid rgba(255,255,255,0.2); }
+.live-num { font-size: 1.4rem; font-weight: 700; letter-spacing: 0.15em; margin-top: 15px; }
+
+.live-btm { display: flex; align-items: flex-end; justify-content: space-between; }
+.live-label { display: block; font-size: 0.55rem; opacity: 0.5; margin-bottom: 4px; }
+.live-name, .live-date { font-size: 0.9rem; font-weight: 600; letter-spacing: 0.05em; }
+.live-network { font-weight: 800; font-style: italic; opacity: 0.8; }
+
+.preview-tip {
+  display: flex;
+  gap: 12px;
+  padding: 16px 20px;
+  background: rgba(255,255,255,0.03);
+  border-radius: 12px;
+  max-width: 350px;
+}
+
+.preview-tip p { font-size: 0.75rem; color: #8892b0; line-height: 1.5; }
+
+/* Success Card */
+.card-preview.success {
+  width: 320px;
+  aspect-ratio: 1.6;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #222, #444);
+  margin: 0 auto;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: left;
+}
+
+@keyframes shimmer {
+  to { left: 200%; }
+}
+
+@media (max-width: 1024px) {
+  .add-card-grid {
+    grid-template-columns: 1fr;
+  }
+}
